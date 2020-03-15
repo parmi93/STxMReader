@@ -1,0 +1,139 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/INFOGEN_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical" >
+    
+	<HorizontalScrollView
+	    android:id="@+id/INFOGEN_HScrollView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal" >
+    
+	    <RelativeLayout
+	        android:id="@+id/INFOGEN_RLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingBottom="@dimen/activity_vertical_margin"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	        android:paddingRight="@dimen/activity_horizontal_margin"
+	        android:paddingTop="@dimen/activity_vertical_margin" >
+
+	        <ImageView
+	            android:id="@+id/INFOGEN_iv_Logo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@xml/bordo_blu"
+	            android:contentDescription="@string/logo"
+	            android:src="@drawable/logo_sitec" />
+
+	        <RelativeLayout
+	            android:id="@+id/INFOGEN_RLayout_InfoGenerali"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/INFOGEN_iv_Logo"
+	            android:layout_alignRight="@+id/INFOGEN_iv_Logo"
+	            android:layout_below="@+id/INFOGEN_iv_Logo"
+	            android:layout_marginTop="30dp"
+	            android:background="@xml/bordo_blu" >
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Copyright"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/INFOGEN_tv_Programmer"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="20dp"
+	                android:text="@string/copyright" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Programmer"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/INFOGEN_tv_Desrizione"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="20dp"
+	                android:text="@string/programmed_by"
+	                android:textStyle="bold" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Desrizione"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/CONN_tv_BLUETOOTHInfoConnessione"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="20dp"
+	                android:text="@string/descrizione_applicazione" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Revisione"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignRight="@+id/INFOGEN_tv_Versione"
+	                android:layout_below="@+id/INFOGEN_tv_Versione"
+	                android:layout_marginTop="20dp"
+	                android:text="@string/revision_n" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Revisione_DATO"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignBaseline="@+id/INFOGEN_tv_Revisione"
+	                android:layout_alignBottom="@+id/INFOGEN_tv_Revisione"
+	                android:layout_alignLeft="@+id/INFOGEN_tv_Versione_DATO"
+	                android:text="@string/hello_world" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Versione_DATO"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignBottom="@+id/INFOGEN_tv_NomeApp"
+	                android:layout_alignParentRight="true"
+	                android:text="@string/hello_world" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_Versione"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignBaseline="@+id/INFOGEN_tv_Versione_DATO"
+	                android:layout_alignBottom="@+id/INFOGEN_tv_Versione_DATO"
+	                android:layout_marginRight="15dp"
+	                android:layout_toLeftOf="@+id/INFOGEN_tv_Versione_DATO"
+	                android:text="@string/versione" />
+
+	            <TextView
+	                android:id="@+id/INFOGEN_tv_NomeApp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentTop="true"
+	                android:text="@string/stxm_reader"
+	                android:textColor="@color/blu"
+	                android:textSize="30sp"
+	                android:textStyle="bold" />
+
+	            <TextView
+	                android:id="@+id/CONN_tv_BLUETOOTHInfoConnessione"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/INFOGEN_tv_Revisione"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="30dp"
+	                android:autoLink="web"
+	                android:linksClickable="true"
+	                android:text="@string/sito_web"
+	                android:textColorLink="@color/blu"
+	                android:textSize="16sp"
+	                android:textStyle="bold" />
+
+	        </RelativeLayout>
+		
+	    </RelativeLayout>
+
+	</HorizontalScrollView>
+</ScrollView>

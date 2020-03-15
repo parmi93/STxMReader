@@ -1,0 +1,499 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/CONN_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical" >
+    
+	<HorizontalScrollView
+	    android:id="@+id/CONN_HScrollView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/CONN_RLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
+
+            <RelativeLayout
+                android:id="@+id/CONN_RLayout_Connessione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CONN_RLayout_TipoConnessione"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" >
+
+                <RelativeLayout
+                    android:id="@+id/CONN_RLayout_USB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@xml/bordo_rosso" >
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBStato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_btn_USBConnetti"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/disconnesso"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBBaudrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/baudrate"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <Button
+                        android:id="@+id/CONN_btn_USBConnetti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_sp_USBBaudrate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:onClick="ClickConnettiUSB"
+                        android:text="@string/connettiti_al_dispositivo" />
+
+                    <Spinner
+                        android:id="@+id/CONN_sp_USBBaudrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_tv_USBBaudrate"
+                        android:layout_centerHorizontal="true"
+                        android:entries="@array/baudrate" />
+
+                    <View
+                        android:id="@+id/CONN_line_USBInfoDevice"
+                        android:layout_width="400dp"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/CONN_tv_USBInfoDevice"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/CONN_tv_USBInfoDevice"
+                        android:background="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBInfoDevice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/CONN_tv_USBStato"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/info_device"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBIdProduttore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/CONN_tv_USBInfoDevice"
+                        android:layout_below="@+id/CONN_tv_USBInfoDevice"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/id_produttore" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBIdVenditore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/CONN_tv_USBIdProduttore"
+                        android:layout_below="@+id/CONN_tv_USBIdProduttore"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/id_venditore" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBIdProduttore_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/CONN_tv_USBIdProduttore"
+                        android:layout_alignBottom="@+id/CONN_tv_USBIdProduttore"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/CONN_tv_USBIdProduttore"
+                        android:text="@string/vuoto" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBIdVenditore_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/CONN_tv_USBIdVenditore"
+                        android:layout_alignBottom="@+id/CONN_tv_USBIdVenditore"
+                        android:layout_alignLeft="@+id/CONN_tv_USBIdProduttore_DATO"
+                        android:text="@string/vuoto" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBBaudrateInfoDevice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/CONN_tv_USBIdVenditore"
+                        android:layout_below="@+id/CONN_tv_USBIdVenditore"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/baudrate" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_USBBaudrateInfoDevice_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CONN_tv_USBBaudrateInfoDevice"
+                        android:layout_alignLeft="@+id/CONN_tv_USBIdVenditore_DATO"
+                        android:text="@string/vuoto" />
+
+                    <ImageView
+                        android:id="@+id/CONN_iv_USB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/usb"
+                        android:src="@drawable/usb" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/CONN_RLayout_REMOTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/CONN_RLayout_USB"
+                    android:layout_centerHorizontal="true"
+                    android:background="@xml/bordo_rosso" >
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOIp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/CONN_tv_REMOTOPorta"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/ip" />
+
+                    <EditText
+                        android:id="@+id/CONN_et_REMOTOIp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/CONN_tv_REMOTOIp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="23dp"
+                        android:layout_toRightOf="@+id/CONN_tv_REMOTOIp"
+                        android:ems="10"
+                        android:hint="@string/ip_esempio"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOPorta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_tv_REMOTOIp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/porta" />
+
+                    <EditText
+                        android:id="@+id/CONN_et_REMOTOPorta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/CONN_tv_REMOTOPorta"
+                        android:layout_alignBottom="@+id/CONN_tv_REMOTOPorta"
+                        android:layout_alignLeft="@+id/CONN_et_REMOTOIp"
+                        android:ems="10"
+                        android:hint="@string/es_porta"
+                        android:inputType="number" />
+
+                    <Button
+                        android:id="@+id/CONN_btn_REMOTOConnettiti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_et_REMOTOPorta"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:onClick="ClickConnettiRemoto"
+                        android:text="@string/connettiti_al_dispositivo" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/CONN_tv_REMOTOStato"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/info"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/CONN_line_REMOTOInfo"
+                        android:layout_width="400dp"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/CONN_tv_REMOTOInfo"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/CONN_tv_REMOTOInfo"
+                        android:background="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOStato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_btn_REMOTOConnettiti"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/disconnesso"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOInfoIp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/CONN_tv_REMOTOInfoPorta"
+                        android:layout_below="@+id/CONN_tv_REMOTOInfo"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/ip" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOInfoPorta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_tv_REMOTOInfoIp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/porta" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOInfoIp_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/CONN_tv_REMOTOInfoIp"
+                        android:layout_alignBottom="@+id/CONN_tv_REMOTOInfoIp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/CONN_tv_REMOTOInfoIp"
+                        android:text="@string/vuoto" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_REMOTOInfoPorta_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CONN_tv_REMOTOInfoPorta"
+                        android:layout_alignLeft="@+id/CONN_tv_REMOTOInfoIp_DATO"
+                        android:text="@string/vuoto" />
+
+                    <ImageView
+                        android:id="@+id/CONN_iv_REMOTOWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/wifi"
+                        android:src="@drawable/wifi" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/CONN_RLayout_Bluetooth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/CONN_RLayout_REMOTO"
+                    android:layout_centerHorizontal="true"
+                    android:background="@xml/bordo_blu" >
+
+                    <ImageView
+                        android:id="@+id/CONN_iv_BLUETOOTH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/bluetooth"
+                        android:src="@drawable/bluetooth" />
+
+                    <ScrollView
+                        android:id="@+id/CONN_ScrollView_BLUETOOTHListaDeviceAssociati"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/CONN_tv_BLUETOOTHInfoConnessione"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:background="@xml/bordo_rosso" >
+
+                        <LinearLayout
+                            android:id="@+id/CONN_LLayout_BLUETOOTHListaDeviceAssociati"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RadioGroup
+                                android:id="@+id/CONN_rg_BLUETOOTHDeviceAssociati"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+                            </RadioGroup>
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <ImageView
+                        android:id="@+id/CONN_iv_BLUETOOTHAggiornaDeviceAssociati"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CONN_ScrollView_BLUETOOTHListaDeviceAssociati"
+                        android:layout_toLeftOf="@+id/CONN_ScrollView_BLUETOOTHListaDeviceAssociati"
+                        android:contentDescription="@string/aggiorna"
+                        android:onClick="OnClickAggiornaDeviceAssociati"
+                        android:src="@drawable/aggiorna_grande" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHStato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_btn_BLUETOOTHConnettiti"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/disconnesso"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/CONN_tv_BLUETOOTHStato"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/info"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/CONN_line_BLUETOOTHInfo"
+                        android:layout_width="400dp"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/CONN_tv_BLUETOOTHInfo"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/CONN_tv_BLUETOOTHInfo"
+                        android:background="@android:color/black" />
+
+                    <Button
+                        android:id="@+id/CONN_btn_BLUETOOTHConnettiti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CONN_ScrollView_BLUETOOTHListaDeviceAssociati"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:onClick="ClickConnettiBluetooth"
+                        android:text="@string/connettiti_al_dispositivo" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHInfoConnessione"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/info_bluetooth"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHNomeDevice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/CONN_tv_BLUETOOTHMacAddress"
+                        android:layout_below="@+id/CONN_tv_BLUETOOTHInfo"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/nome_device" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHNomeDevice_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CONN_tv_BLUETOOTHNomeDevice"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/CONN_tv_BLUETOOTHNomeDevice"
+                        android:text="@string/vuoto" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHMacAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/CONN_tv_BLUETOOTHInfo"
+                        android:layout_below="@+id/CONN_tv_BLUETOOTHNomeDevice"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/mac_address" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_BLUETOOTHMacAddress_DATO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/CONN_tv_BLUETOOTHMacAddress"
+                        android:layout_alignLeft="@+id/CONN_tv_BLUETOOTHNomeDevice_DATO"
+                        android:text="@string/vuoto" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/CONN_RLayout_TipoConnessione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@xml/bordo_blu" >
+
+                <RelativeLayout
+                    android:id="@+id/CONN_RLayout_Timeout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/CONN_rg_TipoConnessione"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@array/baudrate"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/CONN_rg_TipoConnessione" >
+
+                    <Spinner
+                        android:id="@+id/CONN_sp_Timeout"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/CONN_tv_Timeout"
+                        android:entries="@array/timeout" />
+
+                    <TextView
+                        android:id="@+id/CONN_tv_Timeout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/timeout" />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/CONN_rg_TipoConnessione"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="20dp" >
+
+                    <RadioButton
+                        android:id="@+id/CONN_rb_Seriale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/seriale_usb" />
+
+                    <RadioButton
+                        android:id="@+id/CONN_rb_Ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/ip_remoto" />
+
+                    <RadioButton
+                        android:id="@+id/CONN_rb_Bluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bluetooth" />
+                </RadioGroup>
+            </RelativeLayout>
+        </RelativeLayout>
+	</HorizontalScrollView>
+</ScrollView>

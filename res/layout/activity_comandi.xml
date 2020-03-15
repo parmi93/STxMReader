@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/CMD_RLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/CMD_RLayout_ComandiConfigurazioneLettura"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@xml/bordo_rosso" >
+
+        <TextView
+            android:id="@+id/CMD_tv_ComandiConfigurazioneLettura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/comandi_di_configurazione_e_lettura"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/CMD_line_ComandiConfigurazioneLettura"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/CMD_tv_ComandiConfigurazioneLettura"
+            android:background="@android:color/black" />
+
+        <Button
+            android:id="@+id/CMD_btn_CreaListaDispositivi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/CMD_tv_ComandiConfigurazioneLettura"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/cerca"
+            android:maxWidth="200dp"
+            android:minWidth="200dp"
+            android:onClick="OnClickCreaListaDispositivi"
+            android:text="@string/crea_lista_dispositivi" />
+
+        <EditText
+            android:id="@+id/CMD_et_CreaListaDispositivi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/CMD_btn_CreaListaDispositivi"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/CMD_btn_CreaListaDispositivi"
+            android:layout_toRightOf="@+id/CMD_btn_CreaListaDispositivi"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:scrollHorizontally="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical" >
+
+        </EditText>
+
+        <Button
+            android:id="@+id/CMD_btn_LeggiDispositiviInviaEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/CMD_btn_CreaListaDispositivi"
+            android:layout_below="@+id/CMD_btn_CreaListaDispositivi"
+            android:layout_marginTop="30dp"
+            android:drawableTop="@drawable/invia_email"
+            android:maxWidth="200dp"
+            android:minWidth="200dp"
+            android:onClick="OnClickInviaMail"
+            android:text="@string/leggi_dispositivi_e_invia_per_email" />
+
+        <EditText
+            android:id="@+id/CMD_et_LeggiDispositiviInviaEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/CMD_btn_LeggiDispositiviInviaEmail"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/CMD_btn_LeggiDispositiviInviaEmail"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/CMD_btn_LeggiDispositiviInviaEmail"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textMultiLine" />
+
+        <ProgressBar
+            android:id="@+id/CMD_pb_LeggiDispositiviInviaEmail"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/CMD_et_LeggiDispositiviInviaEmail"
+            android:layout_alignTop="@+id/CMD_et_LeggiDispositiviInviaEmail"
+            android:indeterminateBehavior="repeat" />
+
+        <Button
+            android:id="@+id/CMD_btn_Annulla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/CMD_et_LeggiDispositiviInviaEmail"
+            android:layout_alignRight="@+id/CMD_et_LeggiDispositiviInviaEmail"
+            android:onClick="OnClickAnnullaMail"
+            android:text="@string/annulla" />
+
+        <ProgressBar
+            android:id="@+id/CMD_pb_CreaListaDispositivi"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/CMD_et_CreaListaDispositivi"
+            android:layout_alignTop="@+id/CMD_et_CreaListaDispositivi" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/CMD_RLayout_ComandoTestPresenzaAllarmi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CMD_RLayout_ComandiConfigurazioneLettura"
+        android:layout_below="@+id/CMD_RLayout_ComandiConfigurazioneLettura"
+        android:layout_marginTop="30dp"
+        android:background="@xml/bordo_rosso" >
+
+        <View
+            android:id="@+id/CMD_line_ComandoPresenzaAllarmi"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/CMD_tv_ComandoTestAllarmi"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/CMD_tv_ComandoTestAllarmi"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/CMD_tv_ComandoTestAllarmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/comando_di_test_presenza_allarmi_nei_dispositivi"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/CMD_btn_TestPresenzaAllarmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CMD_tv_ComandoTestAllarmi"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/test_allarmi"
+            android:maxWidth="200dp"
+            android:minWidth="200dp"
+            android:onClick="OnClickTestAllarmi"
+            android:text="@string/test_presenza_allarmi" />
+
+        <EditText
+            android:id="@+id/CMD_et_TestPresenzaAllarmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/CMD_btn_TestPresenzaAllarmi"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/CMD_btn_TestPresenzaAllarmi"
+            android:layout_toRightOf="@+id/CMD_btn_TestPresenzaAllarmi"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textMultiLine" />
+
+        <ProgressBar
+            android:id="@+id/CMD_pb_TestPresenzaAllarmi"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/CMD_et_TestPresenzaAllarmi"
+            android:layout_alignTop="@+id/CMD_et_TestPresenzaAllarmi"
+            android:indeterminateBehavior="repeat" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

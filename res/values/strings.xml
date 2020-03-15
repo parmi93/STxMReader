@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">STxM Reader</string>
+    <string name="action_settings">settings</string>
+    <!-- INIZIO STRINGHE GENERICHE -->
+    <string name="hello_world">Hello world!</string>
+    <string name="aggiorna">Aggiorna</string>
+    <string name="salva">Salva</string>
+    <string name="aggiorna_tutto">Aggiorna tutto</string>
+    <string name="salva_tutto">Salva tutto</string>
+    <string name="vuoto">&#8230;</string>
+    <string name="utente">Utente:</string>
+    <string name="password">Password:</string>
+    <string name="disabilitato">Disabilitato</string>
+    <!-- FINE STRINGHE GENERICHE -->
+
+
+    <!-- INIZIO STRINGHE ACTIVITY CONNETTI -->
+    <string name="timeout">Timeout:</string>
+    <string name="seriale_usb">Seriale (USB)</string>
+    <string name="ip_remoto">IP (Remoto)</string>
+    <string name="title_activity_connetti">Connetti</string>
+    <string name="baudrate">Baudrate:</string>
+    <string name="usb">usb</string>
+    
+    <string-array name="timeout">
+        <item>600</item>
+        <item>900</item>
+        <item>1200</item>
+        <item>1500</item>
+        <item>1800</item>
+        <item>2100</item>
+        <item>2400</item>
+        <item>2700</item>
+        <item>3000</item>
+        <item>3300</item>
+        <item>3600</item>
+        <item>3900</item>
+        <item>4200</item>
+        <item>4500</item>
+        <item>4800</item>
+        <item>5100</item>
+    </string-array>
+    
+    <string-array name="baudrate">
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>921600</item>
+    </string-array>
+
+    <string name="connettiti_al_dispositivo">Connettiti al dispositivo</string>
+    <string name="disconnettiti">Disconnettiti</string>
+    <string name="connessione_stabilita">Connessione stabilita</string>
+    <string name="impossibile_stabilire_una_connessione_usb">Impossibile stabilire una connessione\n*Verificare che il cavo USB sia connesso\n*Verificare che il device STCM sia avviato\n*Verificare che il device ANDROID\n supporti USB ON THE GO (OTG)</string>
+    <string name="impossibile_stabilire_una_connessione_remota">Impossibile stabilire una connessione\n*Verificare di essere connessi ad internet\n*Verificare che il device STCM sia avviato\n*Verificare che il device STCM sia connesso ad internet\n*Verificare che IP e Porta siano corretti\n*Verificare che non vi siano altri dispositivi connessi al device STCM\n*Se si sta tentando una connessione al di fuori da una rete locale, \n    verifcare che la porta specificata sia stata aperta dal modem/router</string>
+    <string name="impossibile_stabilire_una_connessione_bluetooth">Impossibile stabilire una connessione\n*Verificare che il bluetooth sia avviato\n*Verificare che il device STCM sia associato ad Android\nSe il problema persiste provare ad riassociare il device STCM ad Android</string>
+    <string name="disconnesso">Disconnesso</string>
+    <string name="info_device">Info device</string>
+    <string name="id_venditore">ID Venditore:</string>
+    <string name="id_produttore">ID Produttore:</string>
+    <string name="info">Info:</string>
+    <string name="ip">IP:</string>
+    <string name="porta">Porta:</string>
+    <string name="es_porta">ES: 5100</string>
+    <string name="wifi">wifi</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="nome_device">Nome device:</string>
+    <string name="info_bluetooth">*Prima di potersi connettere al device STCM è necessario\n associare il device ad Android dalle impostazioni di Android.</string>
+    <string name="mac_address">MAC address:</string>
+    <!-- FINE STRINGHE ACTIVITY CONNETTI -->
+
+
+    <!-- INIZIO STRINGHE ACTIVITY INFO_DISPOSITIVO -->
+    <string name="title_activity_info_dispositivo">Info dispositivo</string>
+    <string name="informazioni_dispositivo">Informazioni dispositivo</string>
+    <string name="costruttore">Costruttore:</string>
+    <string name="modello_dispositivo">Modello dispositivo:</string>
+    <string name="versione_software">Versione software:</string>
+    <string name="modo_di_funzionamento">Modo di funzionamento</string>
+    <string name="segnale_gprs">Segnale GPRS</string>
+    <string name="livello_segnale">Livello segnale:</string>
+    <string name="qualita_segnale">Qualità segnale:</string>
+    <string name="data_e_ora_del_dispositivo">Data e ora del dispositivo</string>
+    <string name="data">Data:</string>
+    <string name="formato_data">gg/mm/aaaa</string>
+    <string name="ora">Ora:</string>
+    <string name="formato_ora">hh:mm:ss</string>
+    <string name="sincronizza_con_la_data_e_ora_del_sistema">Sincronizza con la data e ora del sistema</string>
+    <string name="sito">Sito:</string>
+    <string name="es_sito">Es: Via verdi 14/c</string>
+    <string name="sito_di_installazione">Sito di installazione</string>
+    <!-- FINE STRINGHE ACTIVITY INFO_DISPOSITIVO -->
+
+
+    <!-- INIZIO STRINGHE ACTIVITY GPRS -->
+    <string name="title_activity_gprs">GPRS</string>
+    <string name="imposta_automaticamente">Imposta automaticamente:</string>
+    <string name="impostazioni_correnti">Impostazioni correnti</string>
+    <string name="apn">APN:</string>
+    <string name="es_apn">ES: ibox.tim.it</string>
+    <string name="ip_fisso">IP fisso:</string>
+    <string name="ip_esempio">ES: 62.149.140.237</string>
+    <string name="nome_operatore">Nome operatore:</string>
+    <string name="id_operatore">ID operatore:</string>
+    <string name="data_compression">Data compression:</string>
+    <string name="header_compression">Header compression:</string>
+    <!-- FINE STRINGHE ACTIVITY GPRS -->
+
+
+    <!-- INIZIO STRINGHE ACTIVITY SMTP -->
+    <string name="title_activity_smtp">SMTP</string>
+    <string name="configurazione_smtp">Configurazione SMTP</string>
+    <string name="server_smtp_per_la_posta_in_uscita">Server SMTP per la posta in uscita:</string>
+    <string name="n_porta">N&#176; Porta:</string>
+    <string name="es_server_smtp_uscita">ES: mail.teleletture.eu</string>
+    <string name="es_n_porta">ES: 25</string>
+    <string name="tipo_di_autenticazione">Tipo di autenticazione</string>
+    <string name="nessuna">Nessuna</string>
+    <string name="in_chiaro">In chiaro</string>
+    <string name="mime_64">Mime 64</string>
+    <string name="oggetto">Oggetto</string>
+    <string name="destinatari">Destinatari</string>
+    <string name="cc">Destinatari per conoscenza(CC)</string>
+    <string name="es_destinatari">ES: mario@gmail.com,luca@live.com</string>
+    <string name="es_CC">ES: simpson@live.com,bart@live.com</string>
+    <string name="imposta_valori_predefiniti">Imposta valori predefiniti</string>
+    <!-- FINE STRINGHE ACTIVITY SMTP -->
+
+
+    <!-- INIZIO STRINGHE ACTIVITY INPUT/OUTPUT -->
+    <string name="title_activity_input_output">Input/Output</string>
+    <string name="configurazione_ingresso_1">Configurazione ingresso 1</string>
+    <string name="configurazione_ingresso_2">Configurazione ingresso 2</string>
+    <string name="configurazione_ingresso_3">Configurazione ingresso 3</string>
+    <string name="sms_su_fronte_di_salita">Sms su fronte di salita</string>
+    <string name="sms_su_fronte_di_discesa">Sms su fronte di discesa</string>
+    <string name="sms_al_cambiamento_stato">Sms al cambiamento stato</string>
+    <string name="descrizione_conf1">Descrizione Conf. 1:</string>
+    <string name="descrizione_conf2">Descrizione Conf. 2:</string>
+    <string name="descrizione_conf3">Descrizione Conf. 3:</string>
+    <string name="descrizione_ingressi">Descrizione ingressi</string>
+    <string name="configurazione_out_1">Configurazione uscita 1</string>
+    <string name="configurazione_out_2">Configurazione uscita 2</string>
+    <string name="modo_on_off">Modo ON/OFF</string>
+    <string name="modo_impulsivo">Modo impulsivo</string>
+    <string name="tempo_impulso">Tempo impulso(1&#8211;60sec.):</string>
+    <string name="test_uscita_1">Test uscita 1</string>
+    <string name="test_uscita_2">Test uscita 2</string>
+    <string name="text_ingressi">Test ingressi</string>
+    <string name="uscita">Uscita:</string>
+    <string name="test_ingressi">Test ingressi</string>
+    <string name="i1">I1:</string>
+    <string name="i2">I2:</string>
+    <string name="i3">I3:</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <!-- FINE STRINGHE ACTIVITY INPUT/OUTPUT -->
+
+
+    <!-- INIZIO STRINGHE ACTIVITY NUMERI DI TELEFONO -->
+    <string name="title_activity_telefoni">Numeri di telefono</string>
+    <string name="numeri_di_telefono_per_sms">Numeri di telefono per invio di SMS, notifiche e allarmi</string>
+    <string name="telefono_1">Telefono N&#176; 1:</string>
+    <string name="telefono_2">Telefono N&#176; 2:</string>
+    <string name="telefono_3">Telefono N&#176; 3:</string>
+    <string name="telefono_4">Telefono N&#176; 4:</string>
+    <string name="es_telefono">ES: +393351315068</string>
+    <string name="descrizione_funzionalita_numeri_telefono">*Verranno contattati TUTTI i numeri di telefono\nimpostati, ogni qualvolta sia necessario</string>
+    <!-- FINE STRINGHE ACTIVITY NUMERI DI TELEFONO -->
+
+
+    <!-- INIZIO STRIGHE ACTIVITY SCHEDULTORE LETTURE E ALLARMI -->
+    <string name="title_activity_schedulatore_letture">Schedulatore Letture</string>
+    <string name="title_activity_schedulatore_allarmi">Schedulatore Allarmi</string>
+    <string name="schedulatore_1">Schedulatore 1</string>
+    <string name="schedulatore_2">Schedulatore 2</string>
+    <string name="schedulatore_allarme">Schedulatore allarme</string>
+    <string name="giornaliero">Giornaliero</string>
+    <string name="una_sola_volta">Una sola volta</string>
+    <string name="settimanale">Settimanale</string>
+    <string name="mensile">Mensile</string>
+    <string name="mensile_e">Mensile E</string>
+    <string name="alle_ore">Alle ore:</string>
+    <string name="hint_ora">hh:mm</string>
+    <string name="il_giorno">Il giorno:</string>
+    <string name="hint_giorno_mese">gg/mm</string>
+    <string name="ogni">Ogni:</string>
+    <string name="del_giorno">Del giorno:*</string>
+    <string name="hint_giorni">1&#8211;31</string>
+    <string name="tutti_i_mesi">Tutti i mesi</string>
+    <string name="gennaio">Gennaio</string>
+    <string name="febbraio">Febbraio</string>
+    <string name="marzo">Marzo</string>
+    <string name="aprile">Aprile</string>
+    <string name="maggio">Maggio</string>
+    <string name="giugno">Giugno</string>
+    <string name="luglio">Luglio</string>
+    <string name="agosto">Agosto</string>
+    <string name="settembre">Settembre</string>
+    <string name="ottobre">Ottobre</string>
+    <string name="novembre">Novembre</string>
+    <string name="dicembre">Dicembre</string>
+    <string name="descrizione_del_giorno">&#42;Se viene impostato il 31 per i mesi pi&#249; corti, la schedulazione viene comunque eseguita l&#180;ultimo giorno del mese.</string>
+
+    <string-array name="giorni_settimana">
+        <item>Lunedì</item>
+        <item>Martedì</item>
+        <item>Mercoledì</item>
+        <item>Giovedì</item>
+        <item>Venerdì</item>
+        <item>Sabato</item>
+        <item>Domenica</item>
+    </string-array>
+    <string-array name="numero_settimane">
+        <item>Primo</item>
+        <item>Secondo</item>
+        <item>Terzo</item>
+        <item>Quarto</item>
+        <item>Ultimo</item>
+    </string-array>
+    <!-- FINE STRIGHE ACTIVITY SCHEDULTORE LETTURE -->
+
+
+    <!-- INIZIO STRIGHE ACTIVITY COMANDI -->
+    <string name="title_activity_comandi">Comandi</string>
+    <string name="comandi_di_configurazione_e_lettura">Comandi di configurazione e lettura</string>
+    <string name="crea_lista_dispositivi">Crea lista dispositivi</string>
+    <string name="leggi_dispositivi_e_invia_per_email">Leggi dispositivi e invia per Email</string>
+    <string name="comando_di_test_presenza_allarmi_nei_dispositivi">Comando di test presenza allarmi nei dispositivi</string>
+    <string name="test_presenza_allarmi">Test presenza allarmi</string>
+    <string name="annulla">Annulla</string>
+    <!-- FINE STRIGHE ACTIVITY COMANDI -->
+
+
+    <!-- INIZIO STRIGHE ACTIVITY LISTA DISPOSITIVI -->
+    <string name="title_activity_lista_dispositivi">Lista Dispositivi</string>
+    <string name="leggi_lista_dispositivi">Leggi lista dispositivi</string>
+    <string name="salva_modifiche">Salva modifiche</string>
+    <!-- FINE STRIGHE ACTIVITY LISTA DISPOSITIVI -->
+
+
+    <!-- INIZIO STRIGHE ACTIVITY TERMINALE -->
+    <string name="title_activity_terminale">Terminale</string>
+    <string name="invia">Invia</string>
+    <string name="pulisci">Pulisci</string>
+    <!-- FINE STRIGHE ACTIVITY TERMINALE -->
+	
+	<!-- INIZIO STRIGHE ACTIVITY INFORMAZIONI GENERALI -->
+    <string name="title_activity_informazioni_generali">InformazioniGenerali</string>
+    <string name="stxm_reader">STxM READER</string>
+    <string name="versione">Versione:</string>
+    <string name="logo">Logo</string>
+    <string name="revision_n">Revision N°:</string>
+    <string name="programmed_by">Programmed by: Singh Parminder</string>
+    <string name="copyright">Copyright &#169; 2013 Sitec S.R.L</string>
+   	<string name="descrizione_applicazione">Applicazione per la configurazione di dispositivi STCM2 e STRM2</string>
+   	<string name="sito_web">www.sitecsrl.it</string>
+   	<!-- FINE STRIGHE ACTIVITY INFORMAZIONI GENERALI -->
+
+</resources>

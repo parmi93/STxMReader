@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/OGGETTO_tv_ListaDispositiviIntestazione"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/grigio"
+    android:paddingLeft="10dp"
+    android:text="@string/hello_world"
+    android:textSize="20sp"
+    android:typeface="monospace" />
+

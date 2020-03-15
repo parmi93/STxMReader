@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <GridView
+        android:id="@+id/LISTDISP_gw_Contenuto"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_above="@+id/LISTDISP_btn_SalvaModifiche"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/LISTDISP_gw_Intestazione"
+        android:animateLayoutChanges="false"
+        android:cacheColorHint="#00000000"
+        android:clipChildren="true"
+        android:fastScrollEnabled="true"
+        android:horizontalSpacing="5dip"
+        android:numColumns="2"
+        android:scrollingCache="true"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dip" >
+
+    </GridView>
+
+    <GridView
+        android:id="@+id/LISTDISP_gw_Intestazione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/LISTDISP_RLayout_LeggiSalvaDispositivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/LISTDISP_btn_SalvaModifiche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/LISTDISP_pb"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/salva_grande"
+        android:onClick="OnClickSalvaModifiche"
+        android:text="@string/salva_modifiche" />
+
+    <Button
+        android:id="@+id/LISTDISP_btn_LeggiListaDispositivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/leggi"
+        android:onClick="OnClickLeggiListaDisp"
+        android:text="@string/leggi_lista_dispositivi" />
+
+    <ProgressBar
+        android:id="@+id/LISTDISP_pb"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/LISTDISP_btn_LeggiListaDispositivi"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/LISTDISP_tv_Tot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/LISTDISP_btn_LeggiListaDispositivi"
+        android:layout_toLeftOf="@+id/LISTDISP_pb"
+        android:layout_toRightOf="@+id/LISTDISP_btn_LeggiListaDispositivi"
+        android:text="@string/hello_world" />
+
+</RelativeLayout>

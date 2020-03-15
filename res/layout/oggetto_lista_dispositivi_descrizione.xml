@@ -1,0 +1,15 @@
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/OGGETTO_et_ListaDispositiviDescrizione"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:maxLength="12"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:text="@string/hello_world"
+    android:textSize="20sp"
+    android:typeface="monospace" 
+    android:textColor="@android:color/black"/>
+

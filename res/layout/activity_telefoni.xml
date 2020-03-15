@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TEL_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical" >
+    
+	<HorizontalScrollView
+	    android:id="@+id/TEL_HScrollView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_marginTop="20dp" >
+
+		<RelativeLayout
+		    android:id="@+id/TEL_RLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@xml/bordo_rosso"
+		    android:paddingBottom="@dimen/activity_vertical_margin"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	        android:paddingRight="@dimen/activity_horizontal_margin"
+	        android:paddingTop="@dimen/activity_vertical_margin" >
+
+		    <View
+		        android:id="@+id/TEL_line_NumeriDiTelefono"
+		        android:layout_width="400dp"
+		        android:layout_height="1dp"
+		        android:layout_alignRight="@+id/TEL_tv_NumeriDiTelefono"
+		        android:layout_below="@+id/TEL_tv_NumeriDiTelefono"
+		        android:background="@android:color/black" />
+
+		    <TextView
+		        android:id="@+id/TEL_tv_NumeriDiTelefono"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:text="@string/numeri_di_telefono_per_sms"
+		        android:textStyle="bold" />
+
+		    <TextView
+		        android:id="@+id/TEL_tv_telefono1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/TEL_tv_NumeriDiTelefono"
+		        android:layout_below="@+id/TEL_tv_NumeriDiTelefono"
+		        android:layout_marginTop="20dp"
+		        android:text="@string/telefono_1" />
+
+		    <TextView
+		        android:id="@+id/TEL_tv_telefono2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/TEL_tv_telefono1"
+		        android:layout_below="@+id/TEL_tv_telefono1"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/telefono_2" />
+
+		    <TextView
+		        android:id="@+id/TEL_tv_telefono3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/TEL_tv_telefono2"
+		        android:layout_below="@+id/TEL_tv_telefono2"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/telefono_3" />
+
+		    <TextView
+		        android:id="@+id/TEL_tv_telefono5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/TEL_tv_telefono3"
+		        android:layout_below="@+id/TEL_tv_telefono3"
+		        android:layout_marginTop="30dp"
+		        android:text="@string/telefono_4" />
+
+		    <EditText
+		        android:id="@+id/TEL_et_telefono1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/TEL_tv_telefono1"
+		        android:layout_alignBottom="@+id/TEL_tv_telefono1"
+		        android:layout_alignRight="@+id/TEL_line_NumeriDiTelefono"
+		        android:layout_marginLeft="15dp"
+		        android:layout_toRightOf="@+id/TEL_tv_telefono1"
+		        android:ems="10"
+		        android:hint="@string/es_telefono"
+		        android:inputType="phone" >
+		    </EditText>
+
+		    <EditText
+		        android:id="@+id/TEL_et_telefono2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/TEL_tv_telefono2"
+		        android:layout_alignBottom="@+id/TEL_tv_telefono2"
+		        android:layout_alignLeft="@+id/TEL_et_telefono1"
+		        android:layout_alignRight="@+id/TEL_et_telefono1"
+		        android:ems="10"
+		        android:hint="@string/es_telefono"
+		        android:inputType="phone" />
+
+		    <EditText
+		        android:id="@+id/TEL_et_telefono3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/TEL_tv_telefono3"
+		        android:layout_alignBottom="@+id/TEL_tv_telefono3"
+		        android:layout_alignLeft="@+id/TEL_et_telefono2"
+		        android:layout_alignRight="@+id/TEL_et_telefono2"
+		        android:ems="10"
+		        android:hint="@string/es_telefono"
+		        android:inputType="phone" />
+
+		    <EditText
+		        android:id="@+id/TEL_et_telefono4"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/TEL_tv_telefono5"
+		        android:layout_alignBottom="@+id/TEL_tv_telefono5"
+		        android:layout_alignLeft="@+id/TEL_et_telefono3"
+		        android:layout_alignRight="@+id/TEL_et_telefono3"
+		        android:ems="10"
+		        android:hint="@string/es_telefono"
+		        android:inputType="phone" />
+
+		    <RelativeLayout
+		        android:id="@+id/TEL_RLayout_AggiornaSalvaTutto"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/TEL_tv_Descrizione"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="25dp" >
+
+		        <Button
+		            android:id="@+id/TEL_btn_AggiornaTutto"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@android:color/transparent"
+		            android:drawableTop="@drawable/aggiorna_grande"
+		            android:onClick="OnClickAggiornaTutto"
+		            android:text="@string/aggiorna_tutto" />
+
+		        <Button
+		            android:id="@+id/TEL_btn_SalvaTutto"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="25dp"
+		            android:layout_toRightOf="@+id/TEL_btn_AggiornaTutto"
+		            android:background="@android:color/transparent"
+		            android:drawableTop="@drawable/salva_grande"
+		            android:onClick="OnClickSalvaTutto"
+		            android:text="@string/salva_tutto" />
+
+		    </RelativeLayout>
+
+		    <TextView
+		        android:id="@+id/TEL_tv_Descrizione"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/TEL_et_telefono4"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="20dp"
+		        android:text="@string/descrizione_funzionalita_numeri_telefono" />
+
+		    <ProgressBar
+		        android:id="@+id/TEL_pb"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/TEL_RLayout_AggiornaSalvaTutto"
+		        android:layout_alignParentLeft="true" />
+
+		</RelativeLayout>
+
+	</HorizontalScrollView>
+</ScrollView>

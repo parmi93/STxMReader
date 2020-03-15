@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.sitec.stxmreader"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="12" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="it.sitec.stxmreader.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.Connetti"
+            android:icon="@drawable/connetti"
+            android:label="@string/title_activity_connetti"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.Info_dispositivo"
+            android:icon="@drawable/info"
+            android:label="@string/title_activity_info_dispositivo"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.GPRS"
+            android:icon="@drawable/gprs"
+            android:label="@string/title_activity_gprs"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.SMTP"
+            android:icon="@drawable/email"
+            android:label="@string/title_activity_smtp"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.InputOutput"
+            android:icon="@drawable/io"
+            android:label="@string/title_activity_input_output"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.Telefoni"
+            android:icon="@drawable/telefono"
+            android:label="@string/title_activity_telefoni"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.SchedulatoreLetture"
+            android:icon="@drawable/schedulatore"
+            android:label="@string/title_activity_schedulatore_letture"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.SchedulatoreAllarmi"
+            android:icon="@drawable/alarm"
+            android:label="@string/title_activity_schedulatore_allarmi"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.Comandi"
+            android:icon="@drawable/comandi"
+            android:label="@string/title_activity_comandi"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.ListaDispositivi"
+            android:icon="@drawable/lista_dispositivi"
+            android:label="@string/title_activity_lista_dispositivi"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.Terminale"
+            android:icon="@drawable/terminale"
+            android:label="@string/title_activity_terminale"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="it.sitec.stxmreader.InformazioniGenerali"
+            android:label="@string/title_activity_informazioni_generali"
+            android:icon="@drawable/info_generali" >
+        </activity>
+    </application>
+
+</manifest>

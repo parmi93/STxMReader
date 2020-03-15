@@ -1,0 +1,774 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/IO_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical" >
+
+    <HorizontalScrollView
+        android:id="@+id/IO_HScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/IO_RLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
+
+            <RelativeLayout
+                android:id="@+id/IO_RLayout_ConfIngressi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@array/baudrate"
+                android:background="@xml/bordo_rosso" >
+
+                <TextView
+                    android:id="@+id/IO_tv_ConfIngresso1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/configurazione_ingresso_1"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/IO_line_ConfIngresso1"
+                    android:layout_width="330dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/IO_rg_ConfIngresso1"
+                    android:layout_below="@+id/IO_tv_ConfIngresso1"
+                    android:background="@android:color/black" />
+
+                <RadioGroup
+                    android:id="@+id/IO_rg_ConfIngresso1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/IO_line_ConfIngresso1"
+                    android:layout_marginTop="0dp" >
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre1_Disabilitato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/disabilitato" 
+                        android:tag="0"/>
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre1_SmsFronteSalita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:tag="1"
+                        android:text="@string/sms_su_fronte_di_salita" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre1_SmsFronteDiscesa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/sms_su_fronte_di_discesa" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre1_SmsCambiamentoStato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="3"
+                        android:text="@string/sms_al_cambiamento_stato" />
+
+                </RadioGroup>
+                
+                <TextView
+                    android:id="@+id/IO_tv_ConfIngresso2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/IO_line_ConfIngresso1"
+                    android:text="@string/configurazione_ingresso_2"
+                    android:textStyle="bold" />
+
+<View
+    android:id="@+id/IO_line_ConfIngresso2"
+    android:layout_width="330dp"
+    android:layout_height="1dp"
+    android:layout_alignLeft="@+id/IO_tv_ConfIngresso2"
+    android:layout_alignRight="@+id/IO_rg_ConfIngresso2"
+    android:layout_below="@+id/IO_tv_ConfIngresso2"
+    android:background="@android:color/black" />
+
+<RadioGroup
+    android:id="@+id/IO_rg_ConfIngresso2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/IO_tv_ConfIngresso2"
+    android:layout_alignTop="@+id/IO_rg_ConfIngresso1" >
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre2_Disabilitato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:tag="0"
+                        android:text="@string/disabilitato" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre2_SmsFronteSalita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:tag="1"
+                        android:text="@string/sms_su_fronte_di_salita" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre2_SmsFronteDiscesa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/sms_su_fronte_di_discesa" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre2_SmsCambiamentoStato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="3"
+                        android:text="@string/sms_al_cambiamento_stato" />
+
+                </RadioGroup>
+                
+				<RadioGroup
+				    android:id="@+id/IO_rg_ConfIngresso3"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignLeft="@+id/IO_tv_ConfIngresso3"
+				    android:layout_alignTop="@+id/IO_rg_ConfIngresso2" >
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre3_Disabilitato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:tag="0"
+                        android:text="@string/disabilitato" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre3_SmsFronteSalita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:tag="1"
+                        android:text="@string/sms_su_fronte_di_salita" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre3_SmsFronteDiscesa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/sms_su_fronte_di_discesa" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_Ingre3_SmsCambiamentoStato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="3"
+                        android:text="@string/sms_al_cambiamento_stato" />
+
+                </RadioGroup>
+
+			<View
+			    android:id="@+id/IO_line_ConfIngresso3"
+			    android:layout_width="330dp"
+			    android:layout_height="1dp"
+			    android:layout_alignLeft="@+id/IO_tv_ConfIngresso3"
+			    android:layout_alignRight="@+id/IO_rg_ConfIngresso3"
+			    android:layout_below="@+id/IO_tv_ConfIngresso3"
+			    android:background="@android:color/black" />
+			
+			<TextView
+			    android:id="@+id/IO_tv_ConfIngresso3"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:layout_toRightOf="@+id/IO_line_ConfIngresso2"
+			    android:text="@string/configurazione_ingresso_3"
+			    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/IO_RLayout_AggiornaSalvaConfigIngressi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_rg_ConfIngresso1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" >
+
+                    <Button
+                        android:id="@+id/IO_btn_AggiornaConfigIngressi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/aggiorna_medio"
+                        android:onClick="OnClickAggiornaConfInressi"
+                        android:text="@string/aggiorna" />
+
+                    <Button
+                        android:id="@+id/IO_btn_SalvaConfigIngressi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/IO_btn_AggiornaConfigIngressi"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/salva_medio"
+                        android:onClick="OnClickSalvaConfIngressi"
+                        android:text="@string/salva" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/IO_RLayout_DescrizioneIngressi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/IO_RLayout_ConfIngressi"
+                android:layout_below="@+id/IO_RLayout_ConfIngressi"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_toLeftOf="@+id/IO_RLayout_ConfOUT"
+                android:background="@xml/bordo_rosso" >
+
+                <TextView
+                    android:id="@+id/IO_tv_DescrizioneConfIngre3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_DescrizioneConfIngre2"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/descrizione_conf3" />
+
+                <EditText
+                    android:id="@+id/IO_et_DescrizioneConfIngre3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_DescrizioneConfIngre3"
+                    android:layout_alignBottom="@+id/IO_tv_DescrizioneConfIngre3"
+                    android:layout_alignLeft="@+id/IO_et_DescrizioneConfIngre2"
+                    android:layout_alignRight="@+id/IO_et_DescrizioneConfIngre2"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="18" />
+
+                <RelativeLayout
+                    android:id="@+id/IO_RLayout_AggiornaSalvaConfigIngre3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_et_DescrizioneConfIngre3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" >
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/IO_et_DescrizioneConfIngre2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_DescrizioneConfIngre2"
+                    android:layout_alignLeft="@+id/IO_et_DescrizioneConfIngre1"
+                    android:layout_alignRight="@+id/IO_et_DescrizioneConfIngre1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="18" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/IO_tv_DescrizioneConfIngre2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_DescrizioneConfIngre1"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/descrizione_conf2" />
+
+                <EditText
+                    android:id="@+id/IO_et_DescrizioneConfIngre1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_DescrizioneConfIngre1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/IO_iv_SalvaDescrizioneConf1"
+                    android:layout_toRightOf="@+id/IO_tv_DescrizioneConfIngre1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="18" />
+
+                <TextView
+                    android:id="@+id/IO_tv_DescrizioneConfIngre1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/IO_line_DescrizioneIngressi"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/descrizione_conf1" />
+
+                <ImageView
+                    android:id="@+id/IO_iv_SalvaDescrizioneConf1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/IO_tv_DescrizioneConfIngre1"
+                    android:layout_alignRight="@+id/IO_line_DescrizioneIngressi"
+                    android:contentDescription="@string/salva"
+                    android:onClick="OnClickSalvaDescrizioneConf1"
+                    android:src="@drawable/salva_mini" />
+
+                <ImageView
+                    android:id="@+id/IO_iv_SalvaDescrizioneConf2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/IO_tv_DescrizioneConfIngre2"
+                    android:layout_alignRight="@+id/IO_iv_SalvaDescrizioneConf1"
+                    android:contentDescription="@string/salva"
+                    android:onClick="OnClickSalvaDescrizioneConf2"
+                    android:src="@drawable/salva_mini" />
+
+                <ImageView
+                    android:id="@+id/IO_iv_SalvaDescrizioneConf3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/IO_tv_DescrizioneConfIngre3"
+                    android:layout_alignLeft="@+id/IO_iv_SalvaDescrizioneConf2"
+                    android:contentDescription="@string/salva"
+                    android:onClick="OnClickSalvaDescrizioneConf3"
+                    android:src="@drawable/salva_mini" />
+
+                <TextView
+                    android:id="@+id/IO_tv_DescrizioneIngressi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/IO_tv_DescrizioneConfIngre1"
+                    android:text="@string/descrizione_ingressi"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/IO_line_DescrizioneIngressi"
+                    android:layout_width="330dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/IO_tv_DescrizioneIngressi"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/IO_tv_DescrizioneIngressi"
+                    android:background="@android:color/black" />
+
+                <Button
+                    android:id="@+id/CONN_btn_BLUETOOTHConnettiti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_DescrizioneConfIngre3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/aggiorna_medio"
+                    android:onClick="OnClickAggiornaDescrizione"
+                    android:text="@string/aggiorna" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/IO_RLayout_TestUsciteIngressi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/IO_RLayout_ConfOUT"
+                android:layout_alignRight="@+id/IO_RLayout_ConfOUT"
+                android:layout_below="@+id/IO_RLayout_ConfOUT"
+                android:layout_marginTop="25dp"
+                android:background="@xml/bordo_rosso" >
+
+                <TextView
+                    android:id="@+id/IO_tv_testIngressi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_testIngressi"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/text_ingressi"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/IO_line_TestIgressi"
+                    android:layout_width="170dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/IO_tv_testIngressi"
+                    android:layout_below="@+id/IO_tv_testIngressi"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/IO_tv_i1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/IO_tv_testIngressi"
+                    android:layout_below="@+id/IO_tv_testIngressi"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/i1" />
+
+                <TextView
+                    android:id="@+id/IO_tv_i2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/IO_tv_i1"
+                    android:layout_below="@+id/IO_tv_i1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/i2" />
+
+                <TextView
+                    android:id="@+id/IO_tv_i3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/IO_tv_i2"
+                    android:layout_below="@+id/IO_tv_i2"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/i3" />
+
+                <TextView
+                    android:id="@+id/IO_tv_i1_DATO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/IO_tv_i1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/IO_tv_i1"
+                    android:text="@string/vuoto" />
+
+                <TextView
+                    android:id="@+id/IO_tv_i2_DATO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_i2"
+                    android:layout_alignLeft="@+id/IO_tv_i1_DATO"
+                    android:layout_toRightOf="@+id/IO_tv_i2"
+                    android:text="@string/vuoto" />
+
+                <TextView
+                    android:id="@+id/IO_tv_i3_DATO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_i3"
+                    android:layout_alignBottom="@+id/IO_tv_i3"
+                    android:layout_alignLeft="@+id/IO_tv_i2_DATO"
+                    android:text="@string/vuoto" />
+
+                <ImageView
+                    android:id="@+id/IO_iv_TestIngressi_Aggiorna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/IO_tv_i2"
+                    android:layout_alignRight="@+id/IO_line_TestIgressi"
+                    android:contentDescription="@string/aggiorna"
+                    android:onClick="OnClickAggiornaTestIngessi"
+                    android:src="@drawable/aggiorna_medio" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/IO_RLayout_AggiornaSalvaTutto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IO_RLayout_TestUscite"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" >
+
+                <Button
+                    android:id="@+id/IO_btn_SalvaTutto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/IO_btn_AggiornaTutto"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/salva_grande"
+                    android:onClick="OnClickSalvaTutto"
+                    android:text="@string/salva_tutto" />
+
+                <Button
+                    android:id="@+id/IO_btn_AggiornaTutto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/aggiorna_grande"
+                    android:onClick="OnClickAggiornaTutto"
+                    android:text="@string/aggiorna_tutto" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/IO_RLayout_ConfOUT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/IO_RLayout_ConfIngressi"
+                android:layout_alignTop="@+id/IO_RLayout_DescrizioneIngressi"
+                android:background="@xml/bordo_rosso" >
+
+                <View
+                    android:id="@+id/IO_line_ConfOUT1"
+                    android:layout_width="280dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/IO_tv_ConfOUT1"
+                    android:layout_below="@+id/IO_tv_ConfOUT1"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/IO_tv_ConfOUT1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/configurazione_out_1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/IO_tv_ConfOUT1_TempoImpulsivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_rg_ConfOUT1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/tempo_impulso" />
+
+                <EditText
+                    android:id="@+id/IO_et_ConfOUT1_TempoImpulsivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_ConfOUT1_TempoImpulsivo"
+                    android:layout_alignBottom="@+id/IO_tv_ConfOUT1_TempoImpulsivo"
+                    android:layout_alignRight="@+id/IO_line_ConfOUT1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/IO_tv_ConfOUT1_TempoImpulsivo"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <TextView
+                    android:id="@+id/IO_tv_ConfOUT2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_ConfOUT1_TempoImpulsivo"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/configurazione_out_2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/IO_tv_ConfOUT2_TempoImpulsivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/IO_rg_ConfOUT2"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/tempo_impulso" />
+
+                <EditText
+                    android:id="@+id/IO_et_ConfOUT2_TempoImpulsivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_ConfOUT2_TempoImpulsivo"
+                    android:layout_alignLeft="@+id/IO_et_ConfOUT1_TempoImpulsivo"
+                    android:layout_alignRight="@+id/IO_et_ConfOUT1_TempoImpulsivo"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <View
+                    android:id="@+id/IO_line_ConfOUT2"
+                    android:layout_width="280dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/IO_tv_ConfOUT2"
+                    android:layout_below="@+id/IO_tv_ConfOUT2"
+                    android:background="@android:color/black" />
+
+                <RadioGroup
+                    android:id="@+id/IO_rg_ConfOUT1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/IO_tv_ConfOUT1" >
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_ConfOUT1_ModoOnOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/modo_on_off" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_ConfOUT1_ModoImpulsivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modo_impulsivo" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/IO_rg_ConfOUT2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/IO_tv_ConfOUT2"
+                    android:layout_below="@+id/IO_tv_ConfOUT2" >
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_ConfOUT2_ModoOnOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/modo_on_off" />
+
+                    <RadioButton
+                        android:id="@+id/IO_rb_ConfOUT2_ModoImpulsivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modo_impulsivo" />
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/IO_RLayout_AggiornaSalvaConfigOUT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_ConfOUT2_TempoImpulsivo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp" >
+
+                    <Button
+                        android:id="@+id/IO_btn_AggiornaConfigOUT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/aggiorna_medio"
+                        android:onClick="OnClickAggiornaConfUscite"
+                        android:text="@string/aggiorna" />
+
+                    <Button
+                        android:id="@+id/IO_btn_SalvaConfigOUT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/IO_btn_AggiornaConfigOUT"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/salva_medio"
+                        android:onClick="OnClickSalvaConfUscite"
+                        android:text="@string/salva" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/IO_pb_Caricamento"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/IO_RLayout_DescrizioneIngressi"
+                android:layout_below="@+id/IO_RLayout_DescrizioneIngressi" />
+
+            <RelativeLayout
+                android:id="@+id/IO_RLayout_TestUscite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/IO_pb_Caricamento"
+                android:layout_alignRight="@+id/IO_RLayout_DescrizioneIngressi"
+                android:layout_alignTop="@+id/IO_RLayout_TestUsciteIngressi"
+                android:background="@xml/bordo_rosso" >
+
+                <ToggleButton
+                    android:id="@+id/IO_tb_Uscita2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_Uscita2"
+                    android:layout_alignBottom="@+id/IO_tv_Uscita2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/IO_tv_Uscita2"
+                    android:onClick="OnClickOnOffUscita"
+                    android:tag="2" />
+
+                <TextView
+                    android:id="@+id/IO_tv_Uscita2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/IO_tv_testUscita2"
+                    android:layout_below="@+id/IO_tv_testUscita2"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/uscita" />
+
+                <TextView
+                    android:id="@+id/IO_tv_Uscita1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_testUscita1"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/uscita" />
+
+                <ToggleButton
+                    android:id="@+id/IO_tb_Uscita1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_Uscita1"
+                    android:layout_alignBottom="@+id/IO_tv_Uscita1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/IO_tv_Uscita1"
+                    android:onClick="OnClickOnOffUscita"
+                    android:tag="1" />
+
+                <TextView
+                    android:id="@+id/IO_tv_testUscita1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/test_uscita_1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/IO_tv_testUscita2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/IO_tv_testUscita1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/IO_line_testUscita1"
+                    android:text="@string/test_uscita_2"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/IO_line_testUscita1"
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/IO_tv_testUscita1"
+                    android:layout_alignRight="@+id/IO_tb_Uscita1"
+                    android:layout_below="@+id/IO_tv_testUscita1"
+                    android:background="@android:color/black" />
+
+                <View
+                    android:id="@+id/IO_line_testUscita2"
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/IO_tv_testUscita2"
+                    android:layout_alignRight="@+id/IO_tb_Uscita2"
+                    android:layout_below="@+id/IO_tv_testUscita2"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/IO_iv_AggiornaTestUscite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IO_tv_Uscita2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:contentDescription="@string/aggiorna"
+                    android:onClick="OnClickAggiornaTestUscite"
+                    android:src="@drawable/aggiorna_medio" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</ScrollView>

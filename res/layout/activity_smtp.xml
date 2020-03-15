@@ -1,0 +1,444 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/SMTP_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical" >
+    
+	<HorizontalScrollView
+	    android:id="@+id/SMTP_HScrollView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal" >
+
+		<RelativeLayout
+		    android:id="@+id/SMTP_RLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingBottom="@dimen/activity_vertical_margin"
+		    android:paddingLeft="@dimen/activity_horizontal_margin"
+		    android:paddingRight="@dimen/activity_horizontal_margin"
+		    android:paddingTop="@dimen/activity_vertical_margin" >
+
+            <RelativeLayout
+                android:id="@+id/SMTP_RLayout_ConfSMTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@xml/bordo_rosso" >
+
+                <TextView
+                    android:id="@+id/SMTP_tv_ConfSMTP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/configurazione_smtp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/SMTP_line_ConfSMTP"
+                    android:layout_width="470dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/SMTP_tv_ConfSMTP"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/SMTP_tv_ServerSMTPUscita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/SMTP_tv_ConfSMTP"
+                    android:layout_below="@+id/SMTP_tv_ConfSMTP"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/server_smtp_per_la_posta_in_uscita" />
+
+                <TextView
+                    android:id="@+id/SMTP_tv_Utente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/SMTP_tv_ServerSMTPUscita"
+                    android:layout_below="@+id/SMTP_tv_ServerSMTPUscita"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/utente" />
+
+                <TextView
+                    android:id="@+id/SMTP_tv_Password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/SMTP_tv_Utente"
+                    android:layout_below="@+id/SMTP_tv_Utente"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/password" />
+
+                <TextView
+                    android:id="@+id/SMTP_tv_NPorta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/SMTP_tv_Password"
+                    android:layout_below="@+id/SMTP_tv_Password"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/n_porta" />
+
+                <EditText
+                    android:id="@+id/SMTP_et_ServerSMTPUscita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SMTP_tv_ServerSMTPUscita"
+                    android:layout_alignRight="@+id/SMTP_line_ConfSMTP"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/SMTP_tv_ServerSMTPUscita"
+                    android:ems="10"
+                    android:hint="@string/es_server_smtp_uscita"
+                    android:inputType="text"
+                    android:maxLength="100" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/SMTP_et_Utente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SMTP_tv_Utente"
+                    android:layout_alignLeft="@+id/SMTP_et_ServerSMTPUscita"
+                    android:layout_alignRight="@+id/SMTP_et_ServerSMTPUscita"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="50" />
+
+                <EditText
+                    android:id="@+id/SMTP_et_Password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SMTP_tv_Password"
+                    android:layout_alignLeft="@+id/SMTP_et_Utente"
+                    android:layout_alignRight="@+id/SMTP_et_Utente"
+                    android:layout_toRightOf="@+id/SMTP_tv_Password"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:maxLength="50" />
+
+                <EditText
+                    android:id="@+id/SMTP_et_NPorta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SMTP_tv_NPorta"
+                    android:layout_alignLeft="@+id/SMTP_et_Password"
+                    android:layout_alignRight="@+id/SMTP_et_Password"
+                    android:layout_toRightOf="@+id/SMTP_tv_NPorta"
+                    android:ems="10"
+                    android:hint="@string/es_n_porta"
+                    android:inputType="text|number" />
+
+                <TextView
+                    android:id="@+id/SMTP_tv_TipoAutenticazione"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SMTP_tv_ConfSMTP"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@+id/SMTP_line_ConfSMTP"
+                    android:text="@string/tipo_di_autenticazione"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/SMTP_line_TipoAutenticazione"
+                    android:layout_width="220dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/SMTP_tv_TipoAutenticazione"
+                    android:layout_below="@+id/SMTP_tv_TipoAutenticazione"
+                    android:background="@android:color/black" />
+
+                <RadioGroup
+                    android:id="@+id/SMTP_rg_TipoAutenticazione"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/SMTP_tv_TipoAutenticazione"
+                    android:layout_below="@+id/SMTP_tv_TipoAutenticazione"
+                    android:layout_marginTop="25dp" >
+
+                    <RadioButton
+                        android:id="@+id/SMTP_rb_Nessuna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/nessuna"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/SMTP_rb_InChiaro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/in_chiaro"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/SMTP_rb_Mime64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mime_64"
+                        android:tag="2" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/SMTP_RLayout_AggSalvaConfSTMP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/SMTP_tv_NPorta"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/SMTP_RLayout_AggiornaSalvaConfigSMTP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/SMTP_tv_NPorta"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" >
+
+                    <Button
+                        android:id="@+id/SMTP_btn_AggiornaConfigSMTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/aggiorna_medio"
+                        android:onClick="OnClickAggiornaConfSMTP"
+                        android:text="@string/aggiorna" />
+
+                    <Button
+                        android:id="@+id/SMTP_btn_SalvaConfigSMTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/SMTP_btn_AggiornaConfigSMTP"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/salva_medio"
+                        android:onClick="OnClickSalvaConfSMTP"
+                        android:text="@string/salva" />
+
+                    <Button
+                        android:id="@+id/SMTP_btn_ImpostaValoriPredefiniti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/SMTP_btn_SalvaConfigSMTP"
+                        android:drawableTop="@drawable/salva_mini"
+                        android:onClick="OnClickImpostaValoriPredefiniti"
+                        android:text="@string/imposta_valori_predefiniti" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SMTP_RLayout_AggSalvaTutto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SMTP_RLayout_OggDestCC"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" >
+
+                <Button
+                    android:id="@+id/STMP_btn_AggiornaTutto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/aggiorna_grande"
+                    android:onClick="OnClickAggiornaTutto"
+                    android:text="@string/aggiorna_tutto" />
+
+                <Button
+                    android:id="@+id/SMTP_btn_SalvaTutto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@+id/STMP_btn_AggiornaTutto"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/salva_grande"
+                    android:onClick="OnClickSalvaTutto"
+                    android:text="@string/salva_tutto" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SMTP_RLayout_OggDestCC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SMTP_RLayout_ConfSMTP"
+                android:layout_alignRight="@+id/SMTP_RLayout_ConfSMTP"
+                android:layout_below="@+id/SMTP_RLayout_ConfSMTP"
+                android:layout_marginTop="30dp"
+                android:background="@xml/bordo_rosso" >
+
+                <TextView
+                android:id="@+id/SMTP_tv_CC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SMTP_et_Destinatari"
+                android:layout_below="@+id/SMTP_et_Destinatari"
+                android:layout_marginTop="25dp"
+                android:text="@string/cc"
+                android:textStyle="bold" />
+<EditText
+                android:id="@+id/SMTP_et_CC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SMTP_tv_CC"
+                android:layout_alignRight="@+id/SMTP_et_Destinatari"
+                android:layout_below="@+id/SMTP_tv_CC"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="@string/es_CC"
+                android:inputType="textEmailAddress"
+                android:maxLength="120" />
+
+<ImageView
+    android:id="@+id/SMTP_iv_Aggiorna_CC"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/SMTP_iv_Salva_CC"
+    android:layout_marginRight="20dp"
+    android:layout_toLeftOf="@+id/SMTP_iv_Salva_CC"
+    android:contentDescription="@string/aggiorna"
+    android:onClick="OnClickAggiornaMailCC"
+    android:src="@drawable/aggiorna_mini" />
+
+<ImageView
+    android:id="@+id/SMTP_iv_Salva_CC"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@+id/SMTP_line_CC"
+    android:layout_alignTop="@+id/SMTP_et_CC"
+    android:contentDescription="@string/salva"
+    android:onClick="OnClickSalvaMailCC"
+    android:src="@drawable/salva_mini" />
+
+<ImageView
+    android:id="@+id/SMTP_iv_SalvaDestinatari"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@+id/SMTP_line_Destinatari"
+    android:layout_alignTop="@+id/SMTP_et_Destinatari"
+    android:contentDescription="@string/salva"
+    android:onClick="OnClickSalvaDestinatari"
+    android:src="@drawable/salva_mini" />
+
+<ImageView
+    android:id="@+id/SMTP_iv_AggiornaDestinatari"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/SMTP_iv_SalvaDestinatari"
+    android:layout_marginRight="20dp"
+    android:layout_toLeftOf="@+id/SMTP_iv_SalvaDestinatari"
+    android:contentDescription="@string/aggiorna"
+    android:onClick="OnClickAggiornaDestinatari"
+    android:src="@drawable/aggiorna_mini" />
+
+<EditText
+                android:id="@+id/SMTP_et_Destinatari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SMTP_tv_Destinatari"
+                android:layout_alignRight="@+id/SMTP_et_Oggetto"
+                android:layout_below="@+id/SMTP_tv_Destinatari"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="@string/es_destinatari"
+                android:inputType="textEmailAddress"
+                android:maxLength="120" />
+<TextView
+                android:id="@+id/SMTP_tv_Destinatari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SMTP_et_Oggetto"
+                android:layout_below="@+id/SMTP_et_Oggetto"
+                android:layout_marginTop="25dp"
+                android:text="@string/destinatari"
+                android:textStyle="bold" />
+
+<ImageView
+    android:id="@+id/SMTP_iv_SalvaOggetto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@+id/SMTP_line_Oggetto"
+    android:layout_alignTop="@+id/SMTP_et_Oggetto"
+    android:contentDescription="@string/salva"
+    android:onClick="OnClickSalvaOggetto"
+    android:src="@drawable/salva_mini" />
+
+<ImageView
+    android:id="@+id/SMTP_iv_AggiornaOggetto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/SMTP_iv_SalvaOggetto"
+    android:layout_marginRight="20dp"
+    android:layout_toLeftOf="@+id/SMTP_iv_SalvaOggetto"
+    android:contentDescription="@string/aggiorna"
+    android:onClick="OnClickAggiornaOggetto"
+    android:src="@drawable/aggiorna_mini" />
+
+<EditText
+                android:id="@+id/SMTP_et_Oggetto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SMTP_tv_Oggetto"
+                android:layout_alignRight="@+id/SMTP_line_Oggetto"
+                android:layout_below="@+id/SMTP_tv_Oggetto"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLength="120" />
+
+<TextView
+    android:id="@+id/SMTP_tv_Oggetto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/oggetto"
+    android:textStyle="bold" />
+
+<View
+    android:id="@+id/SMTP_line_CC"
+    android:layout_width="500dp"
+    android:layout_height="1dp"
+    android:layout_alignLeft="@+id/SMTP_tv_CC"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/SMTP_tv_CC"
+    android:layout_marginTop="0dp"
+    android:background="@android:color/black" />
+
+<View
+    android:id="@+id/SMTP_line_Destinatari"
+    android:layout_width="500dp"
+    android:layout_height="1dp"
+    android:layout_alignLeft="@+id/SMTP_tv_Destinatari"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/SMTP_tv_Destinatari"
+    android:background="@android:color/black" />
+
+<View
+    android:id="@+id/SMTP_line_Oggetto"
+    android:layout_width="500dp"
+    android:layout_height="1dp"
+    android:layout_alignLeft="@+id/SMTP_tv_Oggetto"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/SMTP_tv_Oggetto"
+    android:background="@android:color/black" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/SMTP_pb"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/SMTP_RLayout_AggSalvaTutto"
+                android:layout_alignLeft="@+id/SMTP_RLayout_OggDestCC" />
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+</ScrollView>
